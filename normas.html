@@ -9,7 +9,11 @@
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: #f0f4f7;
-    min-height: 100vh;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   /* Header */
@@ -40,7 +44,7 @@
   .header-sub { font-size: 12px; opacity: 0.75; margin-top: 2px; }
 
   /* Normas */
-  .normas-page { padding: 0 0 24px; background: #f0f4f7; }
+  .normas-page { padding: 0 0 0; background: #f0f4f7; flex: 1; overflow-y: auto; min-height: 0; }
   .normas-block { margin: 14px 16px 0; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
   .normas-block-header {
     background: #3A5068; color: white;
@@ -70,6 +74,37 @@
     border-radius: 20px; padding: 3px 10px;
     font-size: 11px; font-weight: 700;
     margin: 3px 3px 3px 0;
+  }
+  .legal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 16px 14px;
+    background: #f0f4f7;
+    flex-shrink: 0;
+    border-top: 1px solid #d8e4ec;
+  }
+  .legal-links {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .legal-links a {
+    font-size: 10.5px;
+    color: #7a9ab0;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .legal-links a:hover { color: #3A5068; }
+  .legal-links-sep {
+    font-size: 9px;
+    color: #b0c4d0;
+  }
+  .legal-brand {
+    font-size: 9px;
+    color: #b0c4d0;
+    letter-spacing: 0.04em;
   }
 </style>
 </head>
@@ -167,6 +202,16 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- Pie legal -->
+  <div class="legal-footer">
+    <div class="legal-links">
+      <a href="https://apartamentosgo.com/politica-de-privacidad/" target="_blank">Política de privacidad</a>
+      <span class="legal-links-sep">·</span>
+      <a href="https://apartamentosgo.com/aviso-legal/" target="_blank">Aviso legal</a>
+    </div>
+    <div class="legal-brand">Diseñado por StandQR</div>
   </div>
 
 </body>
